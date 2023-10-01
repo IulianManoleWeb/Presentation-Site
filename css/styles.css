@@ -1,0 +1,173 @@
+/* Add variabile */
+:root {
+    --header-height: 3.5rem;
+
+    --text-primary: #00ADB5;
+    --text-secondary: #393E46;
+    --text-dark: #222831;
+    --text-light: #eaeaea;
+    --text-white: #ffffff;
+
+    --bg-primary: #00ADB5;
+    --bg-secondary: #393E46;
+    --bg-dark: #222831;
+    --bg-light: #eaeaea;
+
+    --button-color: #2bb686;
+
+    --fs-large: 1rem;
+    --fs-medium: 0.875rem;
+    --fs-small: 0.75rem;
+
+    --spacing-xl: 2.625rem;
+    --spacing-large: 1.75rem;
+    --spacing-medium: 1rem;
+    --spacing-small: 0.5rem;
+    --spacing-tiny: 0.25rem;
+
+    --mobile-logo-height: 45px;
+
+    --hue: 183;
+    --first-color: hsl(var(--hue), 68%, 71%);
+    --first-color-alt: hsl(var(--hue), 56%, 35%);
+    --title-color: hsl(228, 8%, 95%);
+  
+
+}
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Adaugam proprietati legate de font */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 3.5rem
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: var(--fs-medium);
+}
+/* Adaugam proprietati legate de culori */
+h1 {
+    color: var(--text-primary);
+}
+
+h2 {
+    color: var(--text-light);
+}
+
+h3 {
+    color: var(--text-light);
+}
+
+p {
+    color: var(--text-white);
+}
+
+/* Stilizeara nav-ului */
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--bg-secondary);
+    top:0;
+    left:0;
+    z-index: 2;
+    position:fixed;
+}
+.nav-logo{
+    color:var(--text-light);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left:30px
+}
+.nav-logo span{
+    color: var(--text-primary);
+}
+.nav-close ,
+.nav-toggle{
+    display:flex;
+    font-size: 1.25rem;
+    color: var(--text-white);
+    cursor:pointer;
+}
+a { text-decoration: none; 
+}
+
+/* NAV for mobile */
+@media screen and (max-width: 1022px){
+    .nav-menu{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: hsla(0, 0%, 10%, .3);
+        width: 75%;
+        height: 100%;
+        padding: 4.5rem 0 0 3rem;
+        backdrop-filter: blur(24px);
+        transition: right .4s;
+    }
+    .nav-list{
+        display:flex;
+        flex-direction: column;
+        row-gap: 3rem;
+       
+    }
+    .nav-link{
+        color: var(--text-white);
+        font-size: var(--fs-medium);
+        transition: color .2s;
+    }
+    .nav-link:hover{
+        color: var(--text-primary)
+    }
+    .nav-close{
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+    }
+    a { text-decoration: none; 
+    }
+   
+   
+}
+.show-menu{
+    right: 0;
+}
+
+/* Responsive typography */
+/*@media screen and (min-width: 1152px) {
+    :root {
+      --biggest-font-size: 4rem;
+      --bigger-font-size: 2rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+}
+*/
+
