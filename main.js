@@ -34,10 +34,10 @@ window.onload = function() {
        emailjs.sendForm('service_gbr04um', 'template_s7ez3jp', '#contact-form', '0Nfg7Y6B16p8E_9kB')
            .then(function()  {
                console.log('SUCCESS!');
+               document.getElementById('contact-form').reset()
            }, function(error) {
                console.log('FAILED...', error);
            });
          
    });
 }
-ContactForm.reset();
